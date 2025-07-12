@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class JavaBasics {                            
+public class TrappingW {                            
 
     public static void main(String args[]) {              
     Scanner sc = new Scanner(System.in);
@@ -8,19 +8,19 @@ public class JavaBasics {
     int height[] = {4,2,0,6,3,2,5};
     int width = 1;
 
-    trap(height);
+    trap(height,width);
     }
 
     public static void trap(int height[], int width){
         
-        int maxR = integer.MIN_VALUE;
-        int maxL = integer.MIN_VALUE;
+        int maxR = Integer.MIN_VALUE;
+        int maxL = Integer.MIN_VALUE;
         int waterLvl = 0;
         int trapWtr = 0;
 
         for(int i = 0 ; i < height.length ; i++){
 
-            for(int j = i ; j < height.length ; J++){      //maxRight
+            for(int j = i ; j < height.length ; j++){      //maxRight
 
                 if (height[j] > maxR){
                     maxR = height[j];
@@ -35,22 +35,22 @@ public class JavaBasics {
             }
 
             
-            if (maxR > maxL){
+            if (maxR > maxL){                              //Take small one between maxL & maxR to find water level
                 waterLvl = maxL;
             }else{
                 waterLvl = maxR;
             }
 
             
-            if (waterLvl > height[i]){
-                trapWtr = trapWtr + (waterLvl - height[i])*width ;
+            if (waterLvl > height[i]){                     //if water level is more than height then only we can find trapped water level of perticuler block(if not then no change in trapWtr)  
+               trapWtr = trapWtr + (waterLvl - height[i])*width ; //formula to calculet total trapped water [Area = (water level - height of block) * Width of block]
             }
 
-            maxR = integer.MIN_VALUE;
-            maxL = integer.MIN_VALUE;
+            maxR = Integer.MIN_VALUE;                   //Adjust the main variables at original position after using it because there is stores some values when we used it 
+            maxL = Integer.MIN_VALUE;
             waterLvl = 0;
         }   
         
-        
+        System.out.print("Trapped Rain water = "+ trapWtr);
     }
 }
