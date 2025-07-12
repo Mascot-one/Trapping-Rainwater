@@ -17,6 +17,16 @@ public class JavaBasics {
         int waterLvl = 0;
         int trapWtr = 0;
 
+        for(int i = 0 ; i < height.length ; i++){
+
+            for(int j = i ; j < height.length ; J++){
+
+            }
+
+            for(int k = i ; k >= 0 ; k--){
+                
+            }
+        }  
         
     
     }
