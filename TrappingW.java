@@ -6,11 +6,12 @@ public class JavaBasics {
     Scanner sc = new Scanner(System.in);
     
     int height[] = {4,2,0,6,3,2,5};
+    int width = 1;
 
     trap(height);
     }
 
-    public static void trap(int height[]){
+    public static void trap(int height[], int width){
         
         int maxR = integer.MIN_VALUE;
         int maxL = integer.MIN_VALUE;
@@ -33,6 +34,14 @@ public class JavaBasics {
                 }    
             }
 
+            
+            if (maxR > maxL){
+                waterLvl = maxL;
+            }else{
+                waterLvl = maxR;
+            }
+
+            
             
         }  
         
