@@ -51,6 +51,6 @@ public class TrappingW {
             waterLvl = 0;
         }   
         
-        System.out.print("Trapped Rain water = "+ trapWtr);
+        System.out.print("Trapped Rain water =  "+ trapWtr);
     }
 }
