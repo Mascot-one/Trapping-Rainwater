@@ -42,9 +42,15 @@ public class JavaBasics {
             }
 
             
-            
-        }  
+            if (waterLvl > height[i]){
+                trapWtr = trapWtr + (waterLvl - height[i])*width ;
+            }
+
+            maxR = integer.MIN_VALUE;
+            maxL = integer.MIN_VALUE;
+            waterLvl = 0;
+        }   
         
-    
+        
     }
 }
