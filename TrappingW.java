@@ -14,6 +14,10 @@ public class JavaBasics {
         
         int maxR = integer.MIN_VALUE;
         int maxL = integer.MIN_VALUE;
+        int waterLvl = 0;
+        int trapWtr = 0;
+
+        
     
     }
 }
