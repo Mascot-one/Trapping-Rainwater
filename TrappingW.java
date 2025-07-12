@@ -19,13 +19,21 @@ public class JavaBasics {
 
         for(int i = 0 ; i < height.length ; i++){
 
-            for(int j = i ; j < height.length ; J++){
+            for(int j = i ; j < height.length ; J++){      //maxRight
 
+                if (height[j] > maxR){
+                    maxR = height[j];
+                }
             }
 
-            for(int k = i ; k >= 0 ; k--){
+            for(int k = i ; k >= 0 ; k--){                 //maxLeft
                 
+                if (height[k] > maxL){
+                    maxL = height[k]; 
+                }    
             }
+
+            
         }  
         
     
