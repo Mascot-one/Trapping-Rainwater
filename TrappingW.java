@@ -1,13 +1,13 @@
 import java.util.*;
 
-public class JavaBasics{
+public class TrappingW{
 
     public static void main(String args[]){
 
         int height[] = {4, 2, 0, 3, 2, 5};
         int width = 1;
 
-        System.out.print(trap(height,width));
+        System.out.print("Trapped water = "+trap(height,width));
     }
 
     public static int trap(int height[] , int width){
